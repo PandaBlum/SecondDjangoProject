@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'DjangoSecondProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DjangoSecondProject',
+        'USER': 'denis',
+        'PASSWORD': 'ptk016DV',
+        'HOST': '192.168.0.10',
+        'PORT': '5432'
     }
 }
 
@@ -122,7 +126,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/awesome_media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
