@@ -1,0 +1,8 @@
+Как исправить значение не умещается в тип character varying(50)?
+Коллеги, приветствую!
+Заношу файлы изображений в базу по ссылке.
+Получил очень странную ошибку: django.db.utils.DataError: ОШИБКА: значение не умещается в тип character varying(50).
+img_name1 = urlparse(image).path.split('/')[-1]
+response = requests.get(image)
+if response.status_code == 200:
+        product.image.save(img_name1, ContentFile(response.content), save=True)
